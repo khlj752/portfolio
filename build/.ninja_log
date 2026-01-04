@@ -1,9 +1,0 @@
-# ninja log v6
-11	186	7892192715264644	CMakeFiles/MyEngine.dir/src/main.cpp.obj	7bb3596e5609a054
-22	187	7892192715367720	CMakeFiles/MyEngine.dir/src/Core/Window.cpp.obj	804c6a6cad365294
-187	453	7892192717024863	MyEngine.exe	b01e83d01d46f3f7
-4	179	7892193446764718	CMakeFiles/MyEngine.dir/src/main.cpp.obj	b6139d0f172ebede
-14	180	7892193446891014	CMakeFiles/MyEngine.dir/src/Core/Window.cpp.obj	e9a13002fb2c2de1
-180	397	7892193448526685	MyEngine.exe	b01e83d01d46f3f7
-3	1211	7892194275461911	CMakeFiles/MyEngine.dir/src/Core/Window.cpp.obj	e9a13002fb2c2de1
-1215	1465	7892194287561890	MyEngine.exe	b01e83d01d46f3f7
