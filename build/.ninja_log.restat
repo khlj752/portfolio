@@ -1,0 +1,4 @@
+# ninja log v6
+4	179	7892193446764718	CMakeFiles/MyEngine.dir/src/main.cpp.obj	b6139d0f172ebede
+3	1211	7892194275461911	CMakeFiles/MyEngine.dir/src/Core/Window.cpp.obj	e9a13002fb2c2de1
+180	397	7892193448526685	MyEngine.exe	b01e83d01d46f3f7

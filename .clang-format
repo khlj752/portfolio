@@ -1,0 +1,35 @@
+---
+# Google C++ 스타일 가이드를 기본으로 합니다.
+BasedOnStyle: Google
+
+# 들여쓰기 너비 (Google 표준: 2자)
+IndentWidth: 2
+
+# 한 줄의 최대 길이 (Google 표준: 80자)
+ColumnLimit: 80
+
+# 포인터/참조의 위치 (Google 표준: Left, 예: int* p)
+PointerAlignment: Left
+
+# 탭 사용 금지 (공백 사용)
+UseTab: Never
+
+# 네임스페이스 내부 들여쓰기 여부 (Google 표준: None)
+NamespaceIndentation: None
+
+# 접근 제한자(public, private 등)의 들여쓰기 (Google 표준: -2)
+AccessModifierOffset: -2
+
+# 중괄호 스타일 (Google 표준: Attach - 같은 줄에 중괄호 시작)
+BreakBeforeBraces: Attach
+
+# 표준 규격 지정
+Standard: Latest
+
+# include 정렬 자동화
+SortIncludes: true
+
+# 빈 함수를 한 줄에 허용할지 여부
+AllowShortFunctionsOnASingleLine: Empty
+---
+

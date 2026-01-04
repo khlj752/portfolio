@@ -1,0 +1,45 @@
+---
+# Google 스타일 가이드에 따른 주요 체크 항목 활성화
+Checks: >
+  -*,
+  bugprone-*,
+  google-*,
+  misc-*,
+  modernize-*,
+  performance-*,
+  readability-*,
+  -readability-braces-around-statements,
+  readability-identifier-naming
+
+# 위반 사항을 에러로 처리 (빌드 중단 효과)
+WarningsAsErrors: "readability-identifier-naming,google-*"
+
+CheckOptions:
+  # 1. 클래스 및 구조체: PascalCase
+  - { key: readability-identifier-naming.ClassCase, value: PascalCase }
+  - { key: readability-identifier-naming.StructCase, value: PascalCase }
+
+  # 2. 함수: PascalCase (Google 스타일 특이점)
+  - { key: readability-identifier-naming.FunctionCase, value: PascalCase }
+
+  # 3. 로컬 변수: snake_case
+  - { key: readability-identifier-naming.VariableCase, value: snake_case }
+
+  # 4. 매개변수(Parameter): snake_case
+  - { key: readability-identifier-naming.ParameterCase, value: snake_case }
+
+  # 5. 상수(Constant): kPascalCase (Google 스타일의 핵심)
+  # 예: const int kDaysInAWeek = 7;
+  - { key: readability-identifier-naming.ConstantCase, value: PascalCase }
+  - { key: readability-identifier-naming.ConstantPrefix, value: "k" }
+
+  # 6. 클래스 멤버 변수 (Private): snake_case_ (끝에 언더바)
+  - { key: readability-identifier-naming.PrivateMemberCase, value: snake_case }
+  - { key: readability-identifier-naming.PrivateMemberSuffix, value: "_" }
+
+  # 7. 클래스 멤버 변수 (Public): snake_case
+  - { key: readability-identifier-naming.PublicMemberCase, value: snake_case }
+
+  # 8. 열거형(Enum) 및 열거형 상수
+  - { key: readability-identifier-naming.EnumCase, value: PascalCase }
+  -

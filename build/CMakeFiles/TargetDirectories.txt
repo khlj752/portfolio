@@ -1,0 +1,3 @@
+D:/Hobbit/sound/build/CMakeFiles/MyEngine.dir
+D:/Hobbit/sound/build/CMakeFiles/edit_cache.dir
+D:/Hobbit/sound/build/CMakeFiles/rebuild_cache.dir
