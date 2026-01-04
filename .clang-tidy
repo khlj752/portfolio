@@ -9,6 +9,7 @@ Checks: >
   performance-*,
   readability-*,
   -readability-braces-around-statements,
+  -modernize-use-trailing-return-type,
   readability-identifier-naming
 
 # 위반 사항을 에러로 처리 (빌드 중단 효과)
@@ -42,4 +43,24 @@ CheckOptions:
 
   # 8. 열거형(Enum) 및 열거형 상수
   - { key: readability-identifier-naming.EnumCase, value: PascalCase }
-  -
+  - { key: readability-identifier-naming.EnumConstantCase, value: PascalCase }
+  - { key: readability-identifier-naming.EnumConstantPrefix, value: "k" }
+
+  # 9. 네임스페이스: snake_case
+  - { key: readability-identifier-naming.NamespaceCase, value: snake_case }
+
+  # 10. 매크로: UPPER_CASE
+  - {
+      key: readability-identifier-naming.MacroDefinitionCase,
+      value: UPPER_CASE,
+    }
+
+  # 기타 Google 권장 설정
+  - {
+      key: google-readability-braces-around-statements.ShortStatementLines,
+      value: 1,
+    }
+  - {
+      key: google-readability-namespace-comments.ShortNamespaceLines,
+      value: 10,
+    }

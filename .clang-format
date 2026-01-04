@@ -27,9 +27,7 @@ BreakBeforeBraces: Attach
 Standard: Latest
 
 # include 정렬 자동화
-SortIncludes: true
+SortIncludes: CaseSensitive
 
 # 빈 함수를 한 줄에 허용할지 여부
 AllowShortFunctionsOnASingleLine: Empty
----
-

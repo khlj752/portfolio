@@ -1,21 +1,37 @@
 #include <Windows.h>
 
-#include <string>
+#include <defs.hpp>
+
+struct Size {
+  unsigned int width;
+  unsigned int height;
+};
+
+struct Position {
+  int x;
+  int y;
+};
 
 class Window {
 public:
-  explicit Window(const unsigned int width, const unsigned int height,
-                  const int posX, const int posY) {}
-  ~Window() {}
+  explicit Window(const k::string& title, Size windowSize, Position position);
+  ~Window();
 
   Window(const Window& other) = delete;
-  Window& operator=(const Window& other) = delete;
+  auto operator=(const Window& other) -> Window& = delete;
   Window(Window&& other) = delete;
-  Window& operator=(Window&& other) = delete;
+  auto operator=(Window&& other) -> Window& = delete;
 
-public:
-  HWND wnd_handle_ = NULL;
-  const std::string title_;
-  unsigned int width_;
-  unsigned int height_;
+  void Run();
+
+private:
+  HWND mWndHandle_;
+  k::string mTitle_;
+  Size mSize_;
+  Position mPosition_;
+  bool mIsRunning_ = false;
+
+  static LRESULT CALLBACK WindowProc(HWND hwnd, UINT uMsg, WPARAM wParam,
+                                     LPARAM lParam);
+  LRESULT HandleMessage(HWND hwnd, UINT uMsg, WPARAM wParam, LPARAM lParam);
 };
